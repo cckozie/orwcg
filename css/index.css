@@ -1,0 +1,49 @@
+
+#banner {
+    width:100%;
+    height:95%;
+}
+.ui-title {
+    margin-left:0!important;
+    margin-right:0!important;
+}
+#title {
+    height:25px; 
+    padding-bottom:15px; 
+    background-color:black;
+    color:lightgray;
+    font-weight:normal;
+    text-shadow:none;
+    font-size:1.2em;  
+}
+#image {
+    z-index:1;
+    position: absolute;
+    left:0;
+    top:40px;
+    height:100%;
+}
+#buttons {
+    z-index:2;
+    position: absolute;
+    left:0;
+    top:40px;
+    width:100%;
+}
+.btnicon {
+    height:60px;
+    width:100%;
+    opacity:0.8;
+    margin:0!important;
+    line-height:60px!important;
+}
+    html {
+        -ms-touch-action: pan-x;
+        touch-action: pan-x;
+    }
+
+    #home {
+        position:absolute;
+        top:0;
+        left:0;
+    }
