@@ -31,11 +31,11 @@
     width:100%;
 }
 .btnicon {
-    height:60px;
+    height:50px;
     width:100%;
     opacity:0.8;
     margin:0!important;
-    line-height:60px!important;
+    line-height:50px!important;
 }
     html {
         -ms-touch-action: pan-x;
