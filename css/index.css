@@ -33,5 +33,7 @@
 }
 #btn1Text {
     margin-top:70px;
-    width:100%
+    width:100%;
+    font-size:1.2em;
+    display:in-line;
 }
