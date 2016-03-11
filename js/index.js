@@ -17,15 +17,13 @@
         });
 
     $(document).ready(function(){
-        for(var i=1; i<=8; i++) {
-            var tst = $("#btn"+i).text();
+        for(var i=1; i<=2; i++) {
+            var tst = $("#p"+i).text();
            console.log(tst);
-           if(tst.length > 80) {
-                $("#btn"+i).css("line-height","20px");
-                console.log('longone');
-           } else {
-                $("#btn"+i).css("padding-top", "10px");
-
+           if(tst.length < 40) {
+//                $("#p"+i).html("<br>"+$("#p"+i).text());
+                $("#p"+i).css("padding-top", "15px")
+                console.log($("#p"+i).text());
            }
         }
     });
