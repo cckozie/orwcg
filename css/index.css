@@ -20,13 +20,18 @@
     width:100%;
     opacity:0.8;
     margin:0!important;
-    line-height:75px!important;
-    white-space:normal !important;
+    white-space:normal!important;
     word-wrap:break-word;
     word-break: normal;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:25px;
+    line-height:80px;
 }
 .glyphicon {
     float:right;
+    padding-right:-30px!important;
+    margin-bottom:25px;
     margin-top:25px;
     opacity:0.5;
     font-size:1.3em;
@@ -36,4 +41,7 @@
     width:100%;
     font-size:1.2em;
     display:in-line;
+}
+.ui-loader {
+    display:none!important;
 }
