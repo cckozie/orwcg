@@ -10,3 +10,10 @@
         });    
 
     }
+    
+    
+    
+    function btn1Click() {
+            $("#home").hide();
+            $("#btn1Text").show();
+    }
