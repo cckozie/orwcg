@@ -21,8 +21,8 @@
             var tst = $("#p"+i).text();
            console.log(tst);
            if(tst.length < 40) {
-//                $("#p"+i).html("<br>"+$("#p"+i).text());
-                $("#p"+i).css("margin-top", "40px")
+                $("#p"+i).html("<br>"+$("#p"+i).text());
+//                $("#p"+i).css("margin-top", "40px")
 //                console.log($("#pbtn"+i).text());
            }
         }
