@@ -21,7 +21,7 @@
             var tst = $("#p"+i).html();
            console.log(tst);
            if(tst.length < 40) {
-                $("#p"+i).html(".<br>"+tst);
+                $("#p"+i).html("top line <br>"+tst);
 //                $("#p"+i).css("margin-top", "40px")
 //                console.log($("#pbtn"+i).text());
            }
