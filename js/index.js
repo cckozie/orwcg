@@ -16,23 +16,22 @@
         }
         });
 
-    $(document).ready(function(){
         alert('ready');
         for(var i=1; i<=2; i++) {
-            var tst = $("#p"+i).text();
+            var tst = $("#p"+i).html();
            console.log(tst);
            if(tst.length < 40) {
                alert('shorter');
-                $("#p"+i).text("top line <br>"+tst);
-//                $("#p"+i).css("margin-top", "40px")
+//                $("#p"+i).html("top line <br>"+tst);
+                $("#p"+i).css("margin-top", "15px")
 //                console.log($("#pbtn"+i).text());
            }
         }
-    });
 
-    }
+    
     
     var bd1 = document.getElementById("bd1");
+}
     bd1.onclick = function () {
         $("#home").hide();
         $("#btn1Text").show();
