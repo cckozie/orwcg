@@ -91,11 +91,8 @@
 .bdgly {
     float:right;
     background-color:lightblue;
-    height:100%;
-    padding-top:40px;
+    height:60%;
 }
-=======
 .ui-loader {
     display:none!important;
 }
->>>>>>> 9e87203f452a28a714e712a841a510729fb37d52
