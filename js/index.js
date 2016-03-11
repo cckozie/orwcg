@@ -22,8 +22,8 @@
            console.log(tst);
            if(tst.length < 40) {
 //                $("#p"+i).html("<br>"+$("#p"+i).text());
-                $("#p"+i).css("padding-top", "15px")
-                console.log($("#p"+i).text());
+                $("#p"+i).css("margin-top", "40px")
+//                console.log($("#pbtn"+i).text());
            }
         }
     });
