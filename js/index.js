@@ -18,10 +18,10 @@
 
     $(document).ready(function(){
         for(var i=1; i<=2; i++) {
-            var tst = $("#p"+i).text();
+            var tst = $("#p"+i).html();
            console.log(tst);
            if(tst.length < 40) {
-                $("#p"+i).html("<br>"+$("#p"+i).text());
+                $("#p"+i).html("<br>"+tst);
 //                $("#p"+i).css("margin-top", "40px")
 //                console.log($("#pbtn"+i).text());
            }
