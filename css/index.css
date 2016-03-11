@@ -25,11 +25,7 @@
     width:100%;
     opacity:0.8;
     margin:0!important;
-<<<<<<< HEAD
-    white-space:normal !important;
-=======
     white-space:normal!important;
->>>>>>> 9e87203f452a28a714e712a841a510729fb37d52
     word-wrap:break-word;
     word-break: normal;
     padding-left:30px;
@@ -39,13 +35,10 @@
 }
 .glyphicon {
     float:right;
-<<<<<<< HEAD
     margin-top:-5px;
-=======
     padding-right:-30px!important;
     margin-bottom:25px;
     margin-top:25px;
->>>>>>> 9e87203f452a28a714e712a841a510729fb37d52
     opacity:0.5;
     font-size:1.3em;
 }
@@ -55,7 +48,6 @@
     font-size:1.2em;
     display:in-line;
 }
-<<<<<<< HEAD
 .icon-ok {
     vertical-align: middle;
 }
@@ -68,7 +60,7 @@
     height:100px;
 }
 .bd {
-    height:100px;
+    height:95px;
     width:100%;
     background-color:white;
     opacity:.9;
@@ -79,19 +71,17 @@
 }
 .bdtxt {
     padding-top:30px;
-    margin-left:10px;
+    margin-left:20px;
     margin-right:10px;
     float:left;
     width:85%;
     height:100%;
     background-color:lightgray;
-    display:table;
-    vertical-align:middle;
 }
 .bdgly {
     float:right;
     background-color:lightblue;
-    height:70%;
+    margin-top:10px;
 }
 .ui-loader {
     display:none!important;

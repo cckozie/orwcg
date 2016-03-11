@@ -3,6 +3,10 @@
 
     function onDeviceReady() {
         console.log('device is ready');
+        console.log($("#bd1").text());
+        console.log($("#bd1").text().length);
+        console.log($("#p1").text());
+        console.log($("#p1").text().length);
 
         $(window).on("navigate", function (event, data) {
         if (data.state.direction == "back") {
