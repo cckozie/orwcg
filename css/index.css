@@ -6,6 +6,7 @@
     left:0;
     top:40px;
     height:100%;
+    width:100%;
 }
 #buttons {
     z-index:2;
@@ -20,11 +21,17 @@
     opacity:0.8;
     margin:0!important;
     line-height:75px!important;
+    white-space:normal !important;
+    word-wrap:break-word;
+    word-break: normal;
 }
 .glyphicon {
     float:right;
     margin-top:25px;
     opacity:0.5;
     font-size:1.3em;
-    glyphicon:chevron-right;
+}
+#btn1Text {
+    margin-top:70px;
+    width:100%
 }
