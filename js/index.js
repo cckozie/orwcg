@@ -1,6 +1,13 @@
 // Device Event listener
-    document.addEventListener('deviceready', onDeviceReady, false);
-
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+//    document.addEventListener('deviceready', onDeviceReady, false);
+/*
+ document.addEventListener("deviceready", function(){
+      alert("123");
+ },true);
+*/
     function onDeviceReady() {
         console.log('device is ready');
         console.log($("#bd1").text());
