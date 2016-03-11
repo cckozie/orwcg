@@ -39,6 +39,7 @@
     }
 
     function homeClick() {
+        alert('home');
             $("#btn1Text").hide();
             $("#home").show();
     $('.navbar-toggle').click() //bootstrap 3.x by Richard
