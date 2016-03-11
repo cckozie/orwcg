@@ -28,10 +28,21 @@
 
     }
     
+    var bd1 = document.getElementById("bd1");
+    bd1.onclick = function () {
+        $("#home").hide();
+        $("#btn1Text").show();
+    }
 
+    function homeClick() {
+            $("#btn1Text").hide();
+            $("#home").show();
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    }
     
     
     function btn1Click() {
             $("#home").hide();
             $("#btn1Text").show();
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
     }
