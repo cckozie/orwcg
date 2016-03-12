@@ -7,11 +7,15 @@
 
         document.addEventListener("backbutton", onBackKeyDown, false);
 
-        $( document ).on( "swiperight", "#btn1Text", function() {
+//        $( document ).on( "swiperight", "#btn1Text", function() {
+//            showHomePage();
+//        });
+
+        $( document ).on( "swiperight", "#txtdiv", function() {
             showHomePage();
         });
 
-        $( document ).on( "swiperight", "#txtdiv", function() {
+        $( document ).on( "swipeleft", "#txtdiv", function() {
             showHomePage();
         });
 
@@ -40,6 +44,11 @@
     
     var bd1 = document.getElementById("bd1");
 }
+
+        function email() {
+            $('.navbar-toggle').click();
+            $("#emailModal").modal("toggle");
+        }
 
         function homeClick() {
             $('.navbar-toggle').click();
