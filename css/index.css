@@ -13,26 +13,6 @@
     height:100%;
     width:100%;
 }
-#buttons {
-    z-index:2;
-    position: absolute;
-    left:0;
-    top:252px;
-    width:100%;
-}
-.btn-block {
-    height:95px!important;
-    width:100%;
-    opacity:0.8;
-    margin:0!important;
-    white-space:normal!important;
-    word-wrap:break-word;
-    word-break: normal;
-    padding-left:30px;
-    padding-right:30px;
-    padding-top:25px;
-    line-height:80px;
-}
 .glyphicon {
     float:right;
     margin-top:-5px;
@@ -60,7 +40,7 @@
     height:100px;
 }
 .bd {
-    height:95px;
+    height:98px;
     width:100%;
     background-color:white;
     opacity:.9;
@@ -72,20 +52,17 @@
 .bdtxt {
     padding-top:26px;
     height:100%;
-    background-color:lightgray;
     margin-left:20px;
     margin-right:10px;
     width:85%;
     float:left;
 }
 .pbtn {
-    background-color:lightyellow;
     width:100%;
     line-height:20px;
 }
 .bdgly {
     float:right;
-    background-color:lightblue;
     margin-top:10px;
 }
 .ui-loader {
