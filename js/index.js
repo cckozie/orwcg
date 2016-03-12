@@ -7,9 +7,11 @@
 
         document.addEventListener("backbutton", onBackKeyDown, false);
 
-//        $( document ).on( "swiperight", "#btn1Text", function() {
-//            showHomePage();
-//        });
+        cordova.plugins.email.isAvailable(
+            function (isAvailable) {
+                alert('Service is not available'); 
+            } 
+        );
 
         $( document ).on( "swiperight", "#txtdiv", function() {
             showHomePage();
@@ -45,6 +47,10 @@
     var bd1 = document.getElementById("bd1");
 }
 
+        function openEmail() {
+            cordova.plugins.email.open();
+        }
+        
         function email() {
             $('.navbar-toggle').click();
             $("#emailModal").modal("toggle");
@@ -54,6 +60,12 @@
             $('.navbar-toggle').click();
             showHomePage();
         }
+
+        $('#emailModal').on("hidden.bs.modal", function() {
+            alert('hidden');
+            $(this).find('form')[0].reset();
+        });
+
 
         function showHomePage() {
             $("#btn1Text").hide();
