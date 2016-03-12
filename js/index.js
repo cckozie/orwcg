@@ -8,13 +8,23 @@
         document.addEventListener("backbutton", onBackKeyDown, false);
 
         $( document ).on( "swiperight", "#btn1Text", function() {
-            alert('swipe');
-            onBackKeyDown();
-//            $.mobile.changePage( next + ".html", { transition: "slide" });
+            showHomePage();
+        });
+
+        $( document ).on( "swiperight", "#btntxt", function() {
+            showHomePage();
         });
 
         function onBackKeyDown() {
 //            alert('back');
+            if ($('#home').is(':hidden')) {
+                showHomePage();
+            } else {
+                navigator.app.exitApp();
+            }
+        }
+        
+        function showHomePage() {
             $("#btn1Text").hide();
             $("#btn2Text").hide();
             $("#btn3Text").hide();
