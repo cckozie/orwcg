@@ -79,6 +79,10 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <platform name="android">
+        <icon src="img/workers_comp.png"/>
+        <splash src="img/workers_comp.png"/>
+    </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
