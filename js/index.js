@@ -29,6 +29,7 @@ console.log(navHeight);
 console.log(btnDivHeight+":"+btnHeight);
         $("#btnDiv").css("height",btnDivHeight+'px');
         $("#image").css("height",btnDivHeight+'px');
+        $("#banner").css("height",btnDivHeight+'px');
         $(".bd").css("height",btnHeight+'px');
         
         var btnTxtPad = (btnHeight - lineHeight * 2) / 2;
@@ -44,9 +45,9 @@ console.log(btnDivHeight+":"+btnHeight);
         $("#btn5Text").hide();
         $("#aboutDiv").hide();
 
-        $('body').on('touchmove', function(evt) {
-            evt.preventDefault(); 
-        })
+//        $('body').on('touchmove', function(evt) {
+//            evt.preventDefault(); 
+//        })
 
 console.log(1);
         $( document ).on( "swiperight", "#txtdiv", function() {
