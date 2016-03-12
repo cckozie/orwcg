@@ -6,6 +6,10 @@
     function onDeviceReady() {
 
         document.addEventListener("backbutton", onBackKeyDown, false);
+        
+        
+        alert('device width:'+screen.width+' || window width:'+window.innerWidth+' || device height:'+
+        screen.height+' || window height'+window.innerHeight);
 
         $("#btn1Text").hide();
         $("#btn2Text").hide();
