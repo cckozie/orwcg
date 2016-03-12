@@ -17,13 +17,18 @@
 
         $(window).on("navigate", function (event, data) {
         if (data.state.direction == "back") {
+            alert('back');
             $("#btn1Text").hide();
+            $("#btn2Text").hide();
+            $("#btn3Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").hide();
             $("#home").show();
             return false; /* prevent showing previous page */
         }
         });
 
-        alert('ready');
+//        alert('ready');
         for(var i=1; i<=6; i++) {
             var tst = $("#p"+i).html();
             console.log(tst);
@@ -41,11 +46,51 @@
 }
     bd1.onclick = function () {
         $("#home").hide();
+        $("#btn2Text").hide();
+        $("#btn3Text").hide();
+        $("#btn4Text").hide();
+        $("#btn5Text").hide();
         $("#btn1Text").show();
     }
 
+    bd2.onclick = function () {
+        $("#home").hide();
+        $("#btn1Text").hide();
+        $("#btn3Text").hide();
+        $("#btn4Text").hide();
+        $("#btn5Text").hide();
+        $("#btn2Text").show();
+    }
+
+    bd3.onclick = function () {
+        $("#home").hide();
+        $("#btn1Text").hide();
+        $("#btn2Text").hide();
+        $("#btn4Text").hide();
+        $("#btn5Text").hide();
+        $("#btn3Text").show();
+    }
+
+    bd4.onclick = function () {
+        $("#home").hide();
+        $("#btn1Text").hide();
+        $("#btn2Text").hide();
+        $("#btn3Text").hide();
+        $("#btn5Text").hide();
+        $("#btn4Text").show();
+    }
+
+    bd5.onclick = function () {
+        $("#home").hide();
+        $("#btn1Text").hide();
+        $("#btn2Text").hide();
+        $("#btn3Text").hide();
+        $("#btn4Text").hide();
+        $("#btn5Text").show();
+    }
+
     function homeClick() {
-        alert('home');
+//        alert('home');
             $("#btn1Text").hide();
             $("#home").show();
     $('.navbar-toggle').click() //bootstrap 3.x by Richard
