@@ -7,7 +7,8 @@
 
         document.addEventListener("backbutton", onBackKeyDown, false);
 
-        $( document ).on( "swipeleft", page, function() {
+        $( document ).on( "swiperight", "#btn1Text", function() {
+            alert('swipe');
             onBackKeyDown();
 //            $.mobile.changePage( next + ".html", { transition: "slide" });
         });
