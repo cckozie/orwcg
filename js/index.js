@@ -7,12 +7,14 @@
 
         document.addEventListener("backbutton", onBackKeyDown, false);
 
-        cordova.plugins.email.isAvailable(
-            function (isAvailable) {
-                alert('Service is not available'); 
-            } 
-        );
+        $("#btn1Text").hide();
+        $("#btn2Text").hide();
+        $("#btn3Text").hide();
+        $("#btn4Text").hide();
+        $("#btn5Text").hide();
+        $("#aboutDiv").hide();
 
+console.log(1);
         $( document ).on( "swiperight", "#txtdiv", function() {
             showHomePage();
         });
@@ -20,6 +22,7 @@
         $( document ).on( "swipeleft", "#txtdiv", function() {
             showHomePage();
         });
+console.log(2);
 
         function onBackKeyDown() {
 //            alert('back');
@@ -30,6 +33,7 @@
             }
         }
         
+console.log(3);
 
         for(var i=1; i<=6; i++) {
             var tst = $("#p"+i).html();
@@ -43,29 +47,103 @@
         }
 
     
+console.log(4);
     
     var bd1 = document.getElementById("bd1");
-}
 
+    bd1.onclick = function () {
+        if ($('#aboutDiv').is(':hidden')) {
+            $("#home").animate({opacity: "toggle"},500);
+            $("#btn2Text").hide();
+            $("#btn3Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").hide();
+            $("#btn1Text").show();
+        }
+    }
+
+    bd2.onclick = function () {
+        if ($('#aboutDiv').is(':hidden')) {
+            $("#home").animate({opacity: "toggle"},500);
+            $("#btn1Text").hide();
+            $("#btn3Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").hide();
+            $("#btn2Text").show();
+        }
+    }
+    
+    bd3.onclick = function () {
+        if ($('#aboutDiv').is(':hidden')) {
+            $("#home").animate({opacity: "toggle"},500);
+            $("#btn1Text").hide();
+            $("#btn2Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").hide();
+            $("#btn3Text").show();
+        }
+    }
+
+    bd4.onclick = function () {
+        if ($('#aboutDiv').is(':hidden')) {
+            $("#home").animate({opacity: "toggle"},500);
+            $("#btn1Text").hide();
+            $("#btn2Text").hide();
+            $("#btn3Text").hide();
+            $("#btn5Text").hide();
+            $("#btn4Text").show();
+        }
+    }
+
+    bd5.onclick = function () {
+        if ($('#aboutDiv').is(':hidden')) {
+            $("#home").animate({opacity: "toggle"},500);
+            $("#btn1Text").hide();
+            $("#btn2Text").hide();
+            $("#btn3Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").show();
+        }
+    }
+    
+}
+console.log(9);
         function openEmail() {
-            cordova.plugins.email.open();
+            $("#aboutDiv").hide();
+            $('.navbar-toggle').click();
+            cordova.plugins.email.open({
+                to: 'chadkos@gmail.com'
+            });
+        }
+console.log(5);
+ 
+        function showAbout() {
+//            $('.navbar-toggle').click();
+            $("#bd5").off("click");
+            $("#aboutDiv").show();
         }
         
         function email() {
+            $("#aboutDiv").hide();
             $('.navbar-toggle').click();
             $("#emailModal").modal("toggle");
         }
 
-        function homeClick() {
+        function home() {
             $('.navbar-toggle').click();
-            showHomePage();
+            $("#aboutDiv").hide();
+            if ($('#home').is(':hidden')) {
+                showHomePage();
+            }
         }
+console.log(6);
 
         $('#emailModal').on("hidden.bs.modal", function() {
             alert('hidden');
             $(this).find('form')[0].reset();
         });
 
+console.log(7);
 
         function showHomePage() {
             $("#btn1Text").hide();
@@ -80,53 +158,4 @@
             });            
 //            $("#home").show();
         }
-
-    bd1.onclick = function () {
-//        $("#home").hide();
-        $("#home").animate({opacity: "toggle"},500);
-        $("#btn2Text").hide();
-        $("#btn3Text").hide();
-        $("#btn4Text").hide();
-        $("#btn5Text").hide();
-        $("#btn1Text").show();
-    }
-
-    bd2.onclick = function () {
-//        $("#home").hide();
-        $("#home").animate({opacity: "toggle"},500);
-        $("#btn1Text").hide();
-        $("#btn3Text").hide();
-        $("#btn4Text").hide();
-        $("#btn5Text").hide();
-        $("#btn2Text").show();
-    }
-
-    bd3.onclick = function () {
-//        $("#home").hide();
-        $("#home").animate({opacity: "toggle"},500);
-        $("#btn1Text").hide();
-        $("#btn2Text").hide();
-        $("#btn4Text").hide();
-        $("#btn5Text").hide();
-        $("#btn3Text").show();
-    }
-
-    bd4.onclick = function () {
-//        $("#home").hide();
-        $("#home").animate({opacity: "toggle"},500);
-        $("#btn1Text").hide();
-        $("#btn2Text").hide();
-        $("#btn3Text").hide();
-        $("#btn5Text").hide();
-        $("#btn4Text").show();
-    }
-
-    bd5.onclick = function () {
-//        $("#home").hide();
-        $("#home").animate({opacity: "toggle"},500);
-        $("#btn1Text").hide();
-        $("#btn2Text").hide();
-        $("#btn3Text").hide();
-        $("#btn4Text").hide();
-        $("#btn5Text").show();
-    }
+console.log(8);
