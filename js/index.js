@@ -15,8 +15,8 @@ screen height:1280, window height:567
         document.addEventListener("backbutton", onBackKeyDown, false);
         
         
-        alert('device width:'+screen.width+' || window width:'+window.innerWidth+' || device height:'+
-        screen.height+' || window height'+window.innerHeight);
+//        alert('device width:'+screen.width+' || window width:'+window.innerWidth+' || device height:'+
+//        screen.height+' || window height'+window.innerHeight);
         
         var high = window.innerHeight;
         var wide = window.innerWidth;
@@ -37,14 +37,16 @@ console.log(btnDivHeight+":"+btnHeight);
         var btnGlyMgn = (btnHeight - 25) /2;
         $(".bdgly").css("margin-top",btnGlyMgn+'px');
         
-        
-
         $("#btn1Text").hide();
         $("#btn2Text").hide();
         $("#btn3Text").hide();
         $("#btn4Text").hide();
         $("#btn5Text").hide();
         $("#aboutDiv").hide();
+
+        $('body').on('touchmove', function(evt) {
+            evt.preventDefault(); 
+        })
 
 console.log(1);
         $( document ).on( "swiperight", "#txtdiv", function() {
@@ -82,6 +84,10 @@ console.log(3);
 console.log(4);
     
     var bd1 = document.getElementById("bd1");
+    
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        $('#aboutDiv').hide();
+    });
 
     bd1.onclick = function () {
         if ($('#aboutDiv').is(':hidden')) {
