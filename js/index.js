@@ -24,14 +24,6 @@
             }
         }
         
-        function showHomePage() {
-            $("#btn1Text").hide();
-            $("#btn2Text").hide();
-            $("#btn3Text").hide();
-            $("#btn4Text").hide();
-            $("#btn5Text").hide();
-            $("#home").show();
-        }
 
         for(var i=1; i<=6; i++) {
             var tst = $("#p"+i).html();
@@ -48,8 +40,25 @@
     
     var bd1 = document.getElementById("bd1");
 }
+
+        function showHomePage() {
+            $('.navbar-toggle').click();
+            $("#btn1Text").hide();
+            $("#btn2Text").hide();
+            $("#btn3Text").hide();
+            $("#btn4Text").hide();
+            $("#btn5Text").hide();
+            $( "#home" ).animate({
+                opacity: "toggle"
+                }, {
+                duration: "slow"
+            });            
+//            $("#home").show();
+        }
+
     bd1.onclick = function () {
-        $("#home").hide();
+//        $("#home").hide();
+        $("#home").animate({opacity: "toggle"},500);
         $("#btn2Text").hide();
         $("#btn3Text").hide();
         $("#btn4Text").hide();
@@ -58,7 +67,8 @@
     }
 
     bd2.onclick = function () {
-        $("#home").hide();
+//        $("#home").hide();
+        $("#home").animate({opacity: "toggle"},500);
         $("#btn1Text").hide();
         $("#btn3Text").hide();
         $("#btn4Text").hide();
@@ -67,7 +77,8 @@
     }
 
     bd3.onclick = function () {
-        $("#home").hide();
+//        $("#home").hide();
+        $("#home").animate({opacity: "toggle"},500);
         $("#btn1Text").hide();
         $("#btn2Text").hide();
         $("#btn4Text").hide();
@@ -76,7 +87,8 @@
     }
 
     bd4.onclick = function () {
-        $("#home").hide();
+//        $("#home").hide();
+        $("#home").animate({opacity: "toggle"},500);
         $("#btn1Text").hide();
         $("#btn2Text").hide();
         $("#btn3Text").hide();
@@ -85,26 +97,13 @@
     }
 
     bd5.onclick = function () {
-        $("#home").hide();
+//        $("#home").hide();
+        $("#home").animate({opacity: "toggle"},500);
         $("#btn1Text").hide();
         $("#btn2Text").hide();
         $("#btn3Text").hide();
         $("#btn4Text").hide();
         $("#btn5Text").show();
-    }
-
-    function homeClick() {
-//        alert('home');
-            $("#btn1Text").hide();
-            $("#home").show();
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
-    }
-    
-    
-    function btn1Click() {
-            $("#home").hide();
-            $("#btn1Text").show();
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
     }
 
     function getSize() {
