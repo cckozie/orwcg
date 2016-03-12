@@ -151,7 +151,8 @@ console.log(9);
             $("#aboutDiv").hide();
             $('.navbar-toggle').click();
             cordova.plugins.email.open({
-                to: 'chadkos@gmail.com'
+                to: 'chadkos@gmail.com',
+                subject: 'Workers compensation question'
             });
         }
 console.log(5);
