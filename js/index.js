@@ -15,8 +15,11 @@
         console.log($("#p1").text());
         console.log($("#p1").text().length);
 
-        $(window).on("navigate", function (event, data) {
-        if (data.state.direction == "back") {
+        document.addEventListener("backbutton", onBackKeyDown, false);
+
+//        $(window).on("navigate", function (event, data) {
+//        if (data.state.direction == "back") {
+        function onBackKeyDown() {
             alert('back');
             $("#btn1Text").hide();
             $("#btn2Text").hide();
@@ -24,9 +27,8 @@
             $("#btn4Text").hide();
             $("#btn5Text").hide();
             $("#home").show();
-            return false; /* prevent showing previous page */
         }
-        });
+//        });
 
 //        alert('ready');
         for(var i=1; i<=6; i++) {
