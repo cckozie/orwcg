@@ -11,7 +11,7 @@
             showHomePage();
         });
 
-        $( document ).on( "swiperight", "#btntxt", function() {
+        $( document ).on( "swiperight", "#txtdiv", function() {
             showHomePage();
         });
 
@@ -41,8 +41,12 @@
     var bd1 = document.getElementById("bd1");
 }
 
-        function showHomePage() {
+        function homeClick() {
             $('.navbar-toggle').click();
+            showHomePage();
+        }
+
+        function showHomePage() {
             $("#btn1Text").hide();
             $("#btn2Text").hide();
             $("#btn3Text").hide();
@@ -105,22 +109,3 @@
         $("#btn4Text").hide();
         $("#btn5Text").show();
     }
-
-    function getSize() {
-        alert('checking size');
-/*
-        for(var i=4; i=5; i++) {
-//            var span = document.getElementById("bd3").getElementsByTagName("p")[i],
-                rect = $("#p"+i).getClientRects();
-
-            if (rect.length > 1) { // more than 1 line of text
-                console.log('more');
-            } else {
-                console.log('1');
-            }
-        }*/
-        var rect = $("#p4")[0].getBoundingClientRect(); 
-        console.log(rect.height);       
-    }
-//    oBndRct = obj.getBoundingClientRect();
-//    nDivLen = oBndRct.right - oBndRct.left + 1;    
