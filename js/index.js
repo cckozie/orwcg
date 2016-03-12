@@ -1,3 +1,10 @@
+/*
+screen width:720, window width:360
+screen height:1280, window height:567
+(567-40) / 5 = 105
+*/
+
+
 // Device Event listener
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -10,6 +17,27 @@
         
         alert('device width:'+screen.width+' || window width:'+window.innerWidth+' || device height:'+
         screen.height+' || window height'+window.innerHeight);
+        
+        var high = window.innerHeight;
+        var wide = window.innerWidth;
+console.log(high+":"+wide);
+        var navHeight = 52;
+        var lineHeight = 20;
+console.log(navHeight);
+        var btnDivHeight = high - navHeight;
+        var btnHeight = btnDivHeight / 5;
+console.log(btnDivHeight+":"+btnHeight);
+        $("#btnDiv").css("height",btnDivHeight+'px');
+        $("#image").css("height",btnDivHeight+'px');
+        $(".bd").css("height",btnHeight+'px');
+        
+        var btnTxtPad = (btnHeight - lineHeight * 2) / 2;
+        $(".bdtxt").css("padding-top",btnTxtPad+'px');
+        var btnTxtMgn = lineHeight/2;
+        var btnGlyMgn = (btnHeight - 25) /2;
+        $(".bdgly").css("margin-top",btnGlyMgn+'px');
+        
+        
 
         $("#btn1Text").hide();
         $("#btn2Text").hide();
@@ -39,13 +67,13 @@ console.log(2);
         
 console.log(3);
 
-        for(var i=1; i<=6; i++) {
+        for(var i=1; i<=5; i++) {
             var tst = $("#p"+i).html();
             console.log(tst);
             var rect = $("#p"+i)[0].getBoundingClientRect(); 
            if(rect.height < 40) {
 //                $("#p"+i).html("top line <br>"+tst);
-                $("#p"+i).css("margin-top", "15px")
+                $("#p"+i).css("margin-top", btnTxtMgn+"px");
 //                console.log($("#pbtn"+i).text());
            }
         }
