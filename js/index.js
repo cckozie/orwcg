@@ -2,25 +2,18 @@
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
-//    document.addEventListener('deviceready', onDeviceReady, false);
-/*
- document.addEventListener("deviceready", function(){
-      alert("123");
- },true);
-*/
+
     function onDeviceReady() {
-        console.log('device is ready');
-        console.log($("#bd1").text());
-        console.log($("#bd1").text().length);
-        console.log($("#p1").text());
-        console.log($("#p1").text().length);
 
         document.addEventListener("backbutton", onBackKeyDown, false);
 
-//        $(window).on("navigate", function (event, data) {
-//        if (data.state.direction == "back") {
+        $( document ).on( "swipeleft", page, function() {
+            onBackKeyDown();
+//            $.mobile.changePage( next + ".html", { transition: "slide" });
+        });
+
         function onBackKeyDown() {
-            alert('back');
+//            alert('back');
             $("#btn1Text").hide();
             $("#btn2Text").hide();
             $("#btn3Text").hide();
@@ -28,9 +21,7 @@
             $("#btn5Text").hide();
             $("#home").show();
         }
-//        });
 
-//        alert('ready');
         for(var i=1; i<=6; i++) {
             var tst = $("#p"+i).html();
             console.log(tst);
