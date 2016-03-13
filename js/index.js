@@ -148,9 +148,13 @@ console.log(4);
     
 }
 console.log(9);
-        function openEmail() {
+        function email() {
             $("#aboutDiv").hide();
             $('.navbar-toggle').click();
+            openEmail();
+        }
+
+        function openEmail() {
             cordova.plugins.email.open({
                 to: 'chadkos@gmail.com',
                 subject: 'Workers compensation question'
@@ -164,12 +168,6 @@ console.log(5);
             $("#aboutDiv").show();
         }
         
-        function email() {
-            $("#aboutDiv").hide();
-            $('.navbar-toggle').click();
-            $("#emailModal").modal("toggle");
-        }
-
         function home() {
             $('.navbar-toggle').click();
             $("#aboutDiv").hide();
