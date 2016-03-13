@@ -22,9 +22,10 @@ screen height:1280, window height:567
         var wide = window.innerWidth;
 console.log(high+":"+wide);
         var navHeight = 52;
-        var lineHeight = 20;
+        var btnAskHeight = 40;
+        var lineHeight = 25;
 console.log(navHeight);
-        var btnDivHeight = high - navHeight;
+        var btnDivHeight = high - navHeight - btnAskHeight;
         var btnHeight = btnDivHeight / 5;
 console.log(btnDivHeight+":"+btnHeight);
         $("#btnDiv").css("height",btnDivHeight+'px');
