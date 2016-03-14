@@ -84,4 +84,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <splash src="res/icon.png" platform="android" qualifier="mdpi" />
-</widget>
+    <gap:splash src="splash.png" />
+    </widget>
