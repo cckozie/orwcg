@@ -23,6 +23,7 @@ screen height:1280, window height:567
 console.log(high+":"+wide);
         var navHeight = 52;
         var btnAskHeight = high/14;
+console.log('btnAsk height:'+btnAskHeight);
         var lineHeight = 25;
 console.log(navHeight);
         var btnDivHeight = high - navHeight - btnAskHeight;
@@ -32,6 +33,7 @@ console.log(btnDivHeight+":"+btnHeight);
         $("#image").css("height",btnDivHeight+'px');
         $("#banner").css("height",btnDivHeight+'px');
         $(".bd").css("height",btnHeight+'px');
+        $("#btnAsk").css("height",btnAskHeight+'px');
         
         var btnTxtPad = (btnHeight - lineHeight * 2) / 2;
         $(".bdtxt").css("padding-top",btnTxtPad+'px');
